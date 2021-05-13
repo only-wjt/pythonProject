@@ -132,3 +132,8 @@ print(dict1)
 print('---------------')
 sss = 'ssssssss'
 print(tuple(sss))
+
+# 在linux系统中，可以在脚本顶部添加以下命令，即可像shell脚本一样，可直接执行
+#! /usr/bin/env python3
+
+
