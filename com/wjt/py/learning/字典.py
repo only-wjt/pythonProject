@@ -4,9 +4,7 @@
 # 3、key必须是不可变类型，【字符串、元组】  值可以是任意类型
 # 4、每个key是唯一的，存在相同key，后者会覆盖前者
 
-kictA = {'str1': 'dddd'}
-kictA['name'] = '王际涛'
-kictA['age'] = 18
+kictA = {'str1': 'dddd', 'name': '王际涛', 'age': 18}
 # 简单for循环
 for int in range(20):
     kictA[str(int)] = int
