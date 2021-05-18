@@ -20,3 +20,19 @@ if __name__ == '__main__':
     print(rw)
 
 
+# lis、元组、字典的共有操作
+# + --> 同类型的类型才能使用此符号，不同类型会报错
+strA = '人生苦短'
+strB = '我用python'
+print('sss'+strA+strB+'sss')
+listA = [1, 2]
+listB = [3, 4]
+print(listA+listB)
+
+print('人' in strA)
+print(1 in listA)
+
+dict = {'name': '吴彦祖'}
+# 只能判断key
+print('age' in dict)
+
