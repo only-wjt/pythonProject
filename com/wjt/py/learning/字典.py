@@ -26,6 +26,60 @@ print("------------------------删除---------------")
 # del kictA[13]
 # print(kictA)
 # 排序
-print(sorted(kictA.items(), key=lambda d: d[0]))
+# print(sorted(kictA.items(), key=lambda d: d[0]))
 # 按照value进行排序
-print(sorted(kictA.items(), key=lambda d: d[1]))
+# print(sorted(kictA.items(), key=lambda d: d[1]))
+
+
+print(kictA["str1"])
+print('---------------------')
+book = {}
+book["书名"] = "天才在做，疯子在右"
+book["价格"] = 30
+book['作者'] = '高铭'
+book['出版社'] = '人民出版社'
+book.update({'价格': 30 * 0.8})
+for key, value in book.items():
+    print('%s==%s' % (key, value))
+
+del book['书名']  # 删除一个字典
+# v = book.pop("书名")  # 返回值
+book.popitem()  # 删除最后一个并返回最后一个元组{key,value}
+for key, value in book.items():
+    print('%s==%s' % (key, value))
+
+print('--------------------------')
+books = [{'价格': 20, '名称': '流浪地球', '出版社': '人民出版社'}, {'价格': 20, '名称': '三体', '出版社': '人民出版社'}]
+for book in books:
+    del book['出版社']
+    pass
+
+print(books)
+
+# 遍历和查询
+print('=============================')
+# books = [{'价格':20, '名称':'流浪地球','出版社':'人民出版社'},{'价格':20, '名称':'三体','出版社':'人民出版社'}]
+book = {'价格': 20, '名称': '流浪地球', '出版社': '人民出版社'}
+print(book.keys())
+len(book)  # 返回几个键值对
+
+book.get('价格')  # 对于去不存在的key，此种方法不会报错
+print(book.get('价格1', '如果不存在，可以设置次默认值'))  # 相对于book['价格1']
+
+for u in book:
+    print(u)  # 取出的是key
+
+for value in book.keys():
+    print(book.get(value))
+
+print(book.values())
+
+print(book.items())  # [('价格', 20), ('名称', '流浪地球'), ('出版社', '人民出版社')]
+for key, value in book.items():
+    print("{}:{}".format(key, value))
+
+print(book.fromkeys('价格', '555'))
+print('--------------------------')
+print('ssssekeu'.lower())
+print('ssssekeu'.upper())
+
